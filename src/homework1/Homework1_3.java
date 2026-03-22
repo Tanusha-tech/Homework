@@ -3,7 +3,6 @@ package homework1;
 public class Homework1_3 {
 
     public static void main(String[] args) {
-
         /* Задача 3:
         В переменной n хранится трёхзначное число. Создайте программу,
         вычисляющую и выводящую на экран сумму цифр n. Например: n = 126, в

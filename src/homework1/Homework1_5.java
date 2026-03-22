@@ -3,7 +3,6 @@ package homework1;
 public class Homework1_5 {
 
     public static void main(String[] args) {
-
         /* Задача 5:
         В переменных q и w хранятся два натуральных числа. Создайте программу,
         выводящую на экран результат деления q на w с остатком. Пример вывода
