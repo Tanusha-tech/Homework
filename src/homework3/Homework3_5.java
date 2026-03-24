@@ -29,6 +29,5 @@ public class Homework3_5 {
         }
 
         System.out.println("Преобразованный массив: " + Arrays.toString(mass));
-
     }
 }
