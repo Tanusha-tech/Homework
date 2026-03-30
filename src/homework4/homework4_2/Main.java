@@ -1,7 +1,7 @@
 package homework4.homework4_2;
 
-// Пример использования
 public class Main {
+    
     public static void main(String[] args) {
         CashMachine machine = new CashMachine(10, 8, 6);
         machine.printState(); // Просмотр начального баланса
