@@ -1,8 +1,8 @@
 package homework1;
 
 public class Homework1_6 {
-    public static void main(String[] args) {
 
+    public static void main(String[] args) {
         /* Задача * :
         Написать программу которая будет менять местами значение целочисленных
         переменных. */
