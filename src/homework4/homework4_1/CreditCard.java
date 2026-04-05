@@ -1,7 +1,5 @@
 package homework4.homework4_1;
 
-import java.util.Scanner;
-
 public class CreditCard {
     /* Создать класс CreditCard c полями номер счета, текущая сумма на счету.
      Добавьте метод, который позволяет начислять сумму на кредитную карточку.
@@ -11,7 +9,6 @@ public class CreditCard {
      Тестовый сценарий для проверки: Положите деньги на первые две карточки и
      снимите с третьей. Выведите на экран текущее состояние всех трех карточек. */
 
-    Scanner scanner = new Scanner(System.in);
     String accountNumber;
     int money;
 
@@ -20,15 +17,11 @@ public class CreditCard {
         this.money = money;
     }
 
-    public void accrualMoney() {
-        System.out.println("Сколько денег вы хотите положить на карту: " + accountNumber + "?");
-        int accrualMoney = scanner.nextInt();
+    public void accrualMoney(int accrualMoney) {
         money += accrualMoney;
     }
 
-    public void withdrawalMoney() {
-        System.out.println("Сколько денег вы хотите снять с карты: " + accountNumber + "?");
-        int withdrawalMoney = scanner.nextInt();
+    public void withdrawalMoney(int withdrawalMoney) {
         money -= withdrawalMoney;
     }
 

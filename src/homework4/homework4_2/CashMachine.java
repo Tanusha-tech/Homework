@@ -25,7 +25,7 @@ public class CashMachine {
         banknotes50 += add50;
         banknotes100 += add100;
         System.out.println("\n===ПОПОЛНЕНИЕ СЧЕТА===");
-        System.out.println("Вы внесли: " + add20 + " по 20 купюр, " + add50 + " по 50 купюр, " + add50 + " по 100 купюр");
+        System.out.println("Вы внесли: " + add20 + "  купюр по 20, " + add50 + "  купюр по 50, " + add100 + " купюр по 100");
         System.out.println("Итого Вы внесли: " + (add100 * 100 + add50 * 50 + add20 * 20) + " рублей");
     }
 
@@ -36,11 +36,6 @@ public class CashMachine {
             System.out.println("Некорректная сумма.");
             return false;
         }
-
-        // Чекпоинт для банкнот, если начальные попытки выдачи будут неудачными
-        int checkpoint20 = banknotes20;
-        int checkpoint50 = banknotes50;
-        int checkpoint100 = banknotes100;
 
         // Перебор кол-ва банкнот, начиная с максимального номинала
         for (int nominal100 = Math.min(banknotes100, sum / 100); nominal100 >= 0; nominal100--) {
@@ -68,11 +63,6 @@ public class CashMachine {
             }
         }
 
-        // Если комбинация не подошла - возвращаем обратно кол-во банкнот
-        banknotes20 = checkpoint20;
-        banknotes50 = checkpoint50;
-        banknotes100 = checkpoint100;
-
         System.out.println("\n===ВЫДАЧА НАЛИЧНЫХ===");
         System.out.println("Невозможно выдать запрошенную сумму. " + sum + " рублей нельзя обменять на доступные банкноты");
         return false;
@@ -81,7 +71,7 @@ public class CashMachine {
     // Метод для просмотра баланса
     public void printState() {
         System.out.println("\n===ПРОСМОТР БАЛАНСА===");
-        System.out.println("В банкомате: " + banknotes20 + " по 20 купюр, " + banknotes50 + " по 50 купюр, " + banknotes100 + " по 100 купюр");
+        System.out.println("В банкомате: " + banknotes20 + " купюр по 20, " + banknotes50 + " купюр по 50, " + banknotes100 + " купюр по 100");
         System.out.println("Итого на балансе: " + (banknotes100 * 100 + banknotes50 * 50 + banknotes20 * 20) + " рублей");
     }
 }

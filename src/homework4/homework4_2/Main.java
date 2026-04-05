@@ -15,6 +15,9 @@ public class Main {
         machine.withdrawMoney(200); // Пример снятия
         machine.printState();
 
+        machine.withdrawMoney(130); // Пример снятия
+        machine.printState();
+
         machine.addMoney(5, 3, 2);
         machine.printState();
     }

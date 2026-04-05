@@ -7,9 +7,9 @@ public class Main {
         CreditCard creditCard2 = new CreditCard("3911 6101 3452 1154", 10000);
         CreditCard creditCard3 = new CreditCard("3911 6138 7805 2751", 5555);
 
-        creditCard1.accrualMoney();
-        creditCard2.accrualMoney();
-        creditCard3.withdrawalMoney();
+        creditCard1.accrualMoney(300);
+        creditCard2.accrualMoney(500);
+        creditCard3.withdrawalMoney(180);
 
         creditCard1.informationAccountNumber();
         creditCard2.informationAccountNumber();
