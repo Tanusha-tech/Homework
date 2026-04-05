@@ -14,6 +14,7 @@ public class ExceptionsAndError {
 
     public void method1() {
         Scanner scanner = new Scanner(System.in);
+
         try {
             System.out.print("Введите целое число: ");
             int number = scanner.nextInt();
@@ -26,12 +27,11 @@ public class ExceptionsAndError {
 
     public void method2() {
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Введите два числа через пробел: ");
+        System.out.print("Введите делитель ");
         int a = scanner.nextInt();
-        int b = scanner.nextInt();
 
         try {
-            int result = a / b;
+            int result = 10 / a;
         } catch (ArithmeticException e) {
             System.out.println("Ошибка: Деление на ноль.");
         } catch (Exception e) {
@@ -57,6 +57,7 @@ public class ExceptionsAndError {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Введите индекс массива (0-4), чтобы вывести элемент массива: ");
         int[] arr = {10, 20, 30, 40, 50};
+
         try {
             int index = scanner.nextInt();
             System.out.println("Элемент: [%s] = %s".formatted(index, (arr[index])));
